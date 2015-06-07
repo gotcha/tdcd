@@ -8,4 +8,5 @@ Continuous deployment infrastructure developed with tests.
 Run::
 
   $ make configure
+  $ make start
   $ make

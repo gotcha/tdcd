@@ -5,7 +5,7 @@ require "docker"
 
 describe "Dockerfile" do
   before(:all) do
-    image = Docker::Image.build_from_dir('.')
+    image = Docker::Image.build_from_dir('./images/serverspec')
 
     set :os, family: :debian
     set :backend, :docker
