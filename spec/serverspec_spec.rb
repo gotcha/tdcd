@@ -1,11 +1,9 @@
-# spec/Dockerfile_spec.rb
-
 require "serverspec"
 require "docker"
 
-describe "Dockerfile" do
+describe "serverspec Dockerfile" do
   before(:all) do
-    image = Docker::Image.build_from_dir('./images/serverspec')
+    image = Docker::Image.build_from_dir('images/serverspec')
 
     set :os, family: :debian
     set :backend, :docker
@@ -23,7 +21,7 @@ describe "Dockerfile" do
   def rspec_path
     command("which rspec").stdout
   end
-  
+
   def docker_path
     command("which docker").stdout
   end
